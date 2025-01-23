@@ -5,8 +5,8 @@ from TfidfTransformer import TfidfTransformer
 from StreamClassifier import StreamClassifier
 
 def gaussianNB_experiment():
-    chunks = [(250,200),(500, 100), (750, 66), (1000, 50), (1500,33), (2000, 25)]
-    # chunks = [(10,10),(20,10)]
+    # chunks = [(250,200),(500, 100), (750, 66), (1000, 50), (1500,33), (2000, 25)]
+    chunks = [(10,10),(20,10)]
 
     experiment_name = "GaussianNB"
 
