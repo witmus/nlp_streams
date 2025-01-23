@@ -7,16 +7,15 @@ from StreamClassifier import StreamClassifier
 
 def sgdsvm_l2_experiment():
     chunks = [(250,200),(500, 100), (750, 66), (1000, 50)]
-    # chunks = [(10,10)]
-
-    clfs = [
-        StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=False, classifier_type='single'),
-        StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=False, classifier_type='partial'),
-        StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=True, classifier_type='refit'),
-        StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=True, classifier_type='partial')
-    ]
+    # chunks = [(10,10),(20,10)]
 
     experiment_name = "SGDSVM_L2"
 
-    for c in chunks:
+    for c in chunks:#     
+        clfs = [
+            StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=False, classifier_type='single'),
+            StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=False, classifier_type='partial'),
+            StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=True, classifier_type='refit'),
+            StreamClassifier(TfidfTransformer(), SGDClassifier(penalty='l2'), is_transformer_refit=True, classifier_type='partial')
+        ]
         experiment(c[0], c[1], clfs, experiment_name)
