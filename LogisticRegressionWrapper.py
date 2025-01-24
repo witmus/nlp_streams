@@ -1,8 +1,8 @@
 from sklearn.linear_model import LogisticRegression
 
 class LogisticRegressionWrapper(LogisticRegression):
-    def __init__(self):
-        super().__init__(warm_start=True)
+    def __init__(self, warm_start=True):
+        super().__init__(warm_start=warm_start)
     
     def fit(self, X, y):
         return super().fit(X,y)
