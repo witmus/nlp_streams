@@ -18,4 +18,4 @@ def experiment(chunk_size, n_chunks, clfs, results_filename):
             for i in range(n_chunks - 1):
                 scores[c,m,i] = evaluator.scores[c, i, m]
     
-    np.save(f"{results_filename}_scores_{chunk_size}_{n_chunks}", scores)
+    np.save(f"scores/{results_filename}_scores_{chunk_size}_{n_chunks}", scores)
