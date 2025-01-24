@@ -23,6 +23,7 @@ def plot_scores(classifier: str, chunk_size: int, n_chunks: int):
         plt.plot(scores[s,2,:], label=METRICS[2])
         plt.plot(scores[s,3,:], label=METRICS[3])
         plt.legend()
-    plt.show()
+
+    plt.savefig(f'{classifier}_scores_{chunk_size}_{n_chunks}.png')
 
 plot_scores('LogisticRegression', 1000, 10)
