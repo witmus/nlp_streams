@@ -3,7 +3,7 @@ import numpy as np
 from scenarios import SCENARIOS, METRICS
 
 def plot_scores(classifier: str, chunk_size: int, n_chunks: int):
-    scores = np.load(f'{classifier}_scores_{chunk_size}_{n_chunks}.npy')
+    scores = np.load(f'scores/{classifier}_scores_{chunk_size}_{n_chunks}.npy')
     for s,scenario in enumerate(SCENARIOS):
         plt.figure(figsize=(12,8))
         

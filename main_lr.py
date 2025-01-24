@@ -1,9 +1,3 @@
 from experiment_logisticregression import logistic_regression_experiment
-from experiment_gaussianNB import gaussianNB_experiment
-from experiment_sgdsvm_l1 import sgdsvm_l1_experiment
-from experiment_sgdsvm_l2 import sgdsvm_l2_experiment
 
-#gaussianNB_experiment()
-#sgdsvm_l1_experiment()
-#sgdsvm_l2_experiment()
 logistic_regression_experiment()
