@@ -24,3 +24,4 @@ def plot_scores(classifier: str, chunk_size: int, n_chunks: int):
         plt.plot(scores[s,3,:], label=METRICS[3])
         plt.legend()
         plt.savefig(f'plots/{classifier}/{classifier}_{scenario}_{chunk_size}_{n_chunks}.png')
+        plt.close()
