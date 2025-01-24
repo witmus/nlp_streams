@@ -8,7 +8,7 @@ def plot_scores(classifier: str, chunk_size: int, n_chunks: int):
         plt.figure(figsize=(12,8))
         
         plt.subplot(211)
-        plt.title(scenario)
+        plt.title(f'{scenario}\nchunk_size={chunk_size} n_chunks={n_chunks}')
         plt.xlabel('Chunk')
         plt.ylabel('Metric')
         plt.ylim(0,1)
@@ -23,7 +23,4 @@ def plot_scores(classifier: str, chunk_size: int, n_chunks: int):
         plt.plot(scores[s,2,:], label=METRICS[2])
         plt.plot(scores[s,3,:], label=METRICS[3])
         plt.legend()
-
-    plt.savefig(f'{classifier}_scores_{chunk_size}_{n_chunks}.png')
-
-plot_scores('LogisticRegression', 1000, 10)
+        plt.savefig(f'plots/{classifier}/{scenario}_scores_{chunk_size}_{n_chunks}.png')
