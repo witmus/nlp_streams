@@ -19,3 +19,4 @@ def experiment(chunk_size, n_chunks, clfs, results_filename):
                 scores[c,m,i] = evaluator.scores[c, i, m]
     
     np.save(f"scores/{results_filename}_scores_{chunk_size}_{n_chunks}", scores)
+    

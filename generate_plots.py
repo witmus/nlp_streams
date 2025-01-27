@@ -1,3 +1,4 @@
+from plot_by_scenarios import plot_by_scenarios
 from plot_scores import plot_scores
 
 clfs = [
@@ -19,3 +20,7 @@ chunks = [
 for clf in clfs:
     for c in chunks:
         plot_scores(clf,c[0],c[1])
+
+for clf in clfs:
+    for c in chunks:
+        plot_by_scenarios(clf,c[0],c[1])
