@@ -5,8 +5,8 @@ from scenarios import SCENARIOS, METRICS
 
 def plot_by_scenarios(classifier: str, chunk_size: int, n_chunks: int):
     scores = np.load(f'scores/{classifier}_scores_{chunk_size}_{n_chunks}.npy')
-    fig,axs = plt.subplots(2,2, figsize=(16,9), layout='constrained')
     plt.title(f'{classifier}\nchunk_size={chunk_size} n_chunks={n_chunks}')
+    fig,axs = plt.subplots(2,2, figsize=(16,9), layout='compressed')
     for ax, (m,metric) in zip(axs.flat, enumerate(METRICS)):
         ax.set_ylim((0,1))
         ax.set_xlabel('Chunk')

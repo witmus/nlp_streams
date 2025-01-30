@@ -17,9 +17,9 @@ chunks = [
     (2000, 25)
 ]
 
-for clf in clfs:
-    for c in chunks:
-        plot_scores(clf,c[0],c[1])
+# for clf in clfs:
+#     for c in chunks:
+#         plot_scores(clf,c[0],c[1])
 
 for clf in clfs:
     for c in chunks:
